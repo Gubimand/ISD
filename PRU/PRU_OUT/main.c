@@ -16,7 +16,6 @@
 #include "prugpio.h"
 
 volatile register uint32_t __R30;    //Output register
-volatile register uint32_t __R31;    //Input register
 
 #define SHARE_MEM 0x00010000
 volatile uint32_t *shared = (unsigned int*) SHARE_MEM;
