@@ -29,7 +29,7 @@ void main(void) {
 	CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
 	while (1) {
-		if (shared[0] == 1) {	//Checks shared memory to see if input changed
+		if (shared[0]) {	//Checks shared memory to see if input changed
 			__R30 |= gpio;        //Set the GPIO pin to 1 if input changed
 		} else {
 			__R30 &= ~gpio;        // Set GPIO to 0
